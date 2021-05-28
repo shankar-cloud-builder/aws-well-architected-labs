@@ -1,5 +1,5 @@
 ---
-title: "Add and Configure Services"
+title: "Add & Configure Services"
 date: 2021-02-18T26:16:08-04:00
 chapter: false
 weight: 2
@@ -67,7 +67,7 @@ A simple 3 tier LAMP (**L**inux **A**pache **M**ySQL **P**HP) stack based Web Ap
 * Choose **Daily spike traffic**
 * Expand the section **Daily spike pattern** by clicking on the arrow
 * Leave the workloads days to the default option - Monday to Friday
-* Enter **1** for the Baseline and **2** for the Peak, indicating that this workload requires needs 1 instance at normal times and 2 instances during peak.
+* Enter **1** for the Baseline and **2** for the Peak, indicating that this workload requires 1 instance at normal times and 2 instances during peak.
 * Leave the default value - 8 hrs and 30 min for Duration of peak
 
 ![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation12.png)
