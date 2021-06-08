@@ -9,7 +9,7 @@ hidden: false
 
 
 ## Last Updated
-May 2021
+June 2021
 
 ## Authors
 - Shankar Ramachandran, Principal SA, Cost Optimization
@@ -21,7 +21,7 @@ If you wish to provide feedback on this lab, there is an error, or you want to m
 ## Introduction
 This hands-on lab will guide you through the steps to estimate AWS costs for a sample workload - 3 tier LAMP (**L**inux **A**pache **M**ySQL **P**HP) stack based Web Application. The skills you learn will help you use the AWS Pricing Calculator to estimate costs for your workloads.
 
-![Images/CostEstimation01.png](/Cost/100_Cost_Estimation/Images/CostEstimation01.png)
+![Images/CostEstimation01.png](/Cost/100_Cost_Estimation/Images/CostEstimation01.png?classes=lab_picture_small)
 
 ## Goals
 - Learn how to estimate AWS Costs using AWS Pricing Calculator

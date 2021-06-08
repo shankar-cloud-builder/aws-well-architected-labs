@@ -11,12 +11,12 @@ Lets take the case of a customer facing Web Application. This general purpose wo
 
 A simple 3 tier LAMP (**L**inux **A**pache **M**ySQL **P**HP) stack based Web Application on AWS uses Amazon Application Load balancer, Amazon EC2, Amazon RDS MySQL (Relational Database Service). We will now add and configure these 3 services in the Pricing Calculator. 
 
-![Images/CostEstimation01.png](/Cost/100_Cost_Estimation/Images/CostEstimation01.png)
+![Images/CostEstimation01.png](/Cost/100_Cost_Estimation/Images/CostEstimation01.png?classes=lab_picture_small)
 
 ## Add Load Balancer
 1. On the Add Service page, choose **Elastic Load Balancing** by clicking **Configure** on that tile. You can also use the search bar by typing **Load Balancer** to narrow down the results. 
 
-![Images/CostEstimation01.png](/Cost/100_Cost_Estimation/Images/CostEstimation03.png)
+![Images/CostEstimation03.png](/Cost/100_Cost_Estimation/Images/CostEstimation03.png?classes=lab_picture_small)
 
 3. For the **Description** , enter "Load Balancer"
 
@@ -24,11 +24,11 @@ A simple 3 tier LAMP (**L**inux **A**pache **M**ySQL **P**HP) stack based Web Ap
 
 5. In the **Elastic Load Balancing** section, choose **Application Load Balancer**. Also choose **Load Balancer in AWS Region**
 
-![Images/CostEstimation01.png](/Cost/100_Cost_Estimation/Images/CostEstimation04.png)
+![Images/CostEstimation04.png](/Cost/100_Cost_Estimation/Images/CostEstimation04.png?classes=lab_picture_small)
 
 6. In the **Service settings** section, enter "1" for **Number of Application Load Balancers**
 
-![Images/CostEstimation01.png](/Cost/100_Cost_Estimation/Images/CostEstimation05.png)
+![Images/CostEstimation05.png](/Cost/100_Cost_Estimation/Images/CostEstimation05.png?classes=lab_picture_small)
 
 7. In the **Load Balancer Capacity Units (LCUs)** section:
 * Skip **Processed bytes (Lambda functions as targets)** since we are using EC2 instances 
@@ -38,22 +38,22 @@ A simple 3 tier LAMP (**L**inux **A**pache **M**ySQL **P**HP) stack based Web Ap
 * For **Average number of requests per second per ALB** enter "400" 
 * Rules determine how the load balancer routes requests. For example, the default rule only routes HTTP traffic on port 80 to the EC2 instances (targets). Enter "20" for **Average number of rule evaluations per request**
 
-![Images/CostEstimation01.png](/Cost/100_Cost_Estimation/Images/CostEstimation06.png)
+![Images/CostEstimation06.png](/Cost/100_Cost_Estimation/Images/CostEstimation06.png?classes=lab_picture_small)
 
 8. Click on **Add to my estimate**
 
-![Images/CostEstimation01.png](/Cost/100_Cost_Estimation/Images/CostEstimation07.png)
+![Images/CostEstimation07.png](/Cost/100_Cost_Estimation/Images/CostEstimation07.png?classes=lab_picture_small)
 
-![Images/CostEstimation01.png](/Cost/100_Cost_Estimation/Images/CostEstimation08.png)
+![Images/CostEstimation08.png](/Cost/100_Cost_Estimation/Images/CostEstimation08.png?classes=lab_picture_small)
 
 ## Add EC2  
 1. On the My Estimate page, click on **Add Service**. 
 
-![Images/CostEstimation01.png](/Cost/100_Cost_Estimation/Images/CostEstimation08.png)
+![Images/CostEstimation09.png](/Cost/100_Cost_Estimation/Images/CostEstimation09.png?classes=lab_picture_small)
 
 2. Choose **EC2** by clicking **Configure** on that tile. You can also use the search bar by typing **EC2** to narrow down the results. 
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation10.png)
+![Images/CostEstimation10](/Cost/100_Cost_Estimation/Images/CostEstimation10.png?classes=lab_picture_small)
 
 3. For the Description , enter “EC2”. Leave the default value for **Region** to be **US West (Oregon)** 
 
@@ -61,7 +61,7 @@ A simple 3 tier LAMP (**L**inux **A**pache **M**ySQL **P**HP) stack based Web Ap
 
 5. In the **EC2 instance specifications** section, choose **Linux** for the Operating system
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation11.png)
+![Images/CostEstimation11](/Cost/100_Cost_Estimation/Images/CostEstimation11.png?classes=lab_picture_small)
 
 6. In the **Workload** section, you can select the pattern that best describes the workload. 
 * Choose **Daily spike traffic**
@@ -70,16 +70,16 @@ A simple 3 tier LAMP (**L**inux **A**pache **M**ySQL **P**HP) stack based Web Ap
 * Enter **1** for the Baseline and **2** for the Peak, indicating that this workload requires 1 instance at normal times and 2 instances during peak.
 * Leave the default value - 8 hrs and 30 min for Duration of peak
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation12.png)
+![Images/CostEstimation12](/Cost/100_Cost_Estimation/Images/CostEstimation12.png?classes=lab_picture_small)
 
 7. In the **EC2 Instances** section, you can choose the instance needed for this workload. Given that this is a spiky workload, the t instance family is a good fit. 
 * Choose **t4g.small** , which has the requires 2 vCPU, 2 GB RAM 
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation13.png)
+![Images/CostEstimation13](/Cost/100_Cost_Estimation/Images/CostEstimation13.png?classes=lab_picture_small)
 
 8. In the **Pricing Strategy** section, you can choose the option that best fits your need. For this example, we will choose **On-Demand**. Once deployed, you can use the [Lab on Pricing Models](https://www.wellarchitectedlabs.com/cost/100_labs/100_3_pricing_models/) to analyze and determine the best Pricing Strategy for this workload.
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation14.png)
+![Images/CostEstimation14](/Cost/100_Cost_Estimation/Images/CostEstimation14.png?classes=lab_picture_small)
 
 9. In the **Amazon Elastic Block Storage (EBS)** section, configure the storage required for this workload
 * Choose **gp3** for the storage type
@@ -87,28 +87,28 @@ A simple 3 tier LAMP (**L**inux **A**pache **M**ySQL **P**HP) stack based Web Ap
 * Enter **30** for **Storage amount**
 * Lets chose a daily backup schedule. Choose **Daily** for **Snapshot Frequency** and enter "1" **GB** for **Amount changed per snapshot**
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation15.png)
+![Images/CostEstimation15](/Cost/100_Cost_Estimation/Images/CostEstimation15.png?classes=lab_picture_small)
 
 10. In the **Data Transfer** section, you can specify the networking requirements for this workload
 * Enter **50** and **GB per month** for **Inbound Data Transfer**
 * Enter **200** and **GB per month** for **Outbound Data Transfer**
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation16.png)
+![Images/CostEstimation16](/Cost/100_Cost_Estimation/Images/CostEstimation16.png?classes=lab_picture_small)
 
 11. Click on **Add to my estimate**
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation17.png)
+![Images/CostEstimation17](/Cost/100_Cost_Estimation/Images/CostEstimation17.png?classes=lab_picture_small)
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation18.png)
+![Images/CostEstimation18](/Cost/100_Cost_Estimation/Images/CostEstimation18.png?classes=lab_picture_small)
 
 ## Add RDS 
 1. On the My Estimate page, click on **Add Service**. 
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation19.png)
+![Images/CostEstimation19](/Cost/100_Cost_Estimation/Images/CostEstimation19.png?classes=lab_picture_small)
 
 2. Choose **RDS for MySQL** by clicking **Configure** on that tile. You can also use the search bar by typing **RDS** to narrow down the results. 
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation20.png)
+![Images/CostEstimation20](/Cost/100_Cost_Estimation/Images/CostEstimation20.png?classes=lab_picture_small)
 
 3. For the **Description** , enter "Database". Leave the default value for **Region** to be **US West (Oregon)** 
 
@@ -120,7 +120,7 @@ A simple 3 tier LAMP (**L**inux **A**pache **M**ySQL **P**HP) stack based Web Ap
 * Choose **Multi-AZ** for **Deployment Model**
 * Leave the defaut options for **Pricing model**, **Term** and **Purchase option** 
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation21.png)
+![Images/CostEstimation21](/Cost/100_Cost_Estimation/Images/CostEstimation21.png?classes=lab_picture_small)
 
 6. In the section **Storage**:
 * Choose **General Purpose SSD (gp2)** for **Storage for each RDS instance**
@@ -128,13 +128,13 @@ A simple 3 tier LAMP (**L**inux **A**pache **M**ySQL **P**HP) stack based Web Ap
 
 7. For this workload, the default RDS backups are sufficient. You can skip the **Backup** section.
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation22.png)
+![Images/CostEstimation22](/Cost/100_Cost_Estimation/Images/CostEstimation22.png?classes=lab_picture_small)
 
 8. Click on **Add to my estimate**
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation23.png)
+![Images/CostEstimation23](/Cost/100_Cost_Estimation/Images/CostEstimation23.png?classes=lab_picture_small)
 
-![Images/CostEstimation02](/Cost/100_Cost_Estimation/Images/CostEstimation24.png)
+![Images/CostEstimation24](/Cost/100_Cost_Estimation/Images/CostEstimation24.png?classes=lab_picture_small)
 
 {{< prev_next_button link_prev_url="../1_launch_aws_pricing_calculator/" link_next_url="../3_review_estimate/" />}}
 
